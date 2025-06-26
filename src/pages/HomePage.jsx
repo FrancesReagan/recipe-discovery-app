@@ -1,5 +1,7 @@
+// Categories grid//
 // routing HomePage//
 // home page (/) will display all recipe categories//
+
 
 
 

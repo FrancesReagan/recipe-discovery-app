@@ -1,3 +1,4 @@
+// search results//
 // search results--search results page//
 
 function SearchResultPage() {

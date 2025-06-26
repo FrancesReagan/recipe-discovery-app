@@ -1,3 +1,4 @@
+// Recipes in Category//
 // Category page will have routing here as well--will show recipes in a specific category//
 
 function CategoryPage() {

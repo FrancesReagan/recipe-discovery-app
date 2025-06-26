@@ -1,4 +1,6 @@
 
+// main app with routing//
+
 import { Route, Routes } from "react-router-dom";
 import { FavoritesProvider } from "./contexts/FavoritesContext";
 import NavBar from "./components/NavBar";

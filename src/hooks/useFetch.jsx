@@ -1,4 +1,5 @@
 // useFetch--hook that api calls with loading and error states//
+// API calls with abort controllers//
 
 import { useState, useEffect } from 'react';
  
@@ -7,12 +8,15 @@ function useFetch(url, options) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
  
+  // don't fetch if URL is not provided//
   useEffect(() => {
-    if (!url) return; // Don't fetch if URL is not provided
+    if (!url) return; 
  
-    const controller = new AbortController(); // For cleanup
-    setData(null); // Reset data on new fetch
-    setError(null); // Reset error on new fetch
+    // for cleanup when unmounts//
+    const controller = new AbortController(); 
+    setData(null); 
+    // reset error on new fetch//
+    setError(null); 
     setLoading(true);
  
     const fetchData = async () => {
@@ -24,7 +28,8 @@ function useFetch(url, options) {
         const result = await response.json();
         setData(result);
       } catch (err) {
-        if (err.name !== 'AbortError') { // Don't set error if aborted
+        // don't set error if aborted//
+        if (err.name !== 'AbortError') { 
           setError(err);
         }
       } finally {
@@ -38,7 +43,8 @@ function useFetch(url, options) {
     return () => {
       controller.abort();
     };
-  }, [url, options]); // Re-run if url or options change
+    // re-run if url or options change//
+  }, [url, options]); 
  
   return { data, loading, error };
 }
