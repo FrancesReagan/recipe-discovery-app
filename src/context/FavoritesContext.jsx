@@ -30,7 +30,32 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
     const removeFromFavorites = (recipeId) => {
       // filter out the recipe with the matching Id//
       setFavorites(favorites.filter(fav => fav.idMeal !== recipeId));
-    }
+    };
 
+    // function to check if a recipe is in favorites//
+    const isFavorite = (recipeId) => {
+      return favorites.some(fav => fav.idMeal === recipeId);
+    };
 
-  } 
+    // the value object that will be shared with all components//
+    const value = {
+      favorites,
+      addToFavorites,
+      removeFromFavorites,
+      isFavorite
+    };
+
+    // provide the value to all child components//
+    return (
+      <FavoritesContext.Provider value={value}>
+        {children}
+      </FavoritesContext.Provider>
+    );
+  } ;
+
+  // make sure the hook is used within a FavoritesProvider//
+  if(!context) {
+    throw new Error("useFavorites must be used within a FavoritesProvider");
+  
+  return context;
+};
