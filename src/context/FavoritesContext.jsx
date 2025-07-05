@@ -1,26 +1,26 @@
 
-// global favorites state//
-// global state  management for favorites//
-// favoritescontext manages favorite recipes across the whole application---and
-// provides functions to add, remove, and check favorite status//
+// global state for managing favorite recipes//
 
 import { createContext, useContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { UNSAFE_createBrowserHistory } from "react-router-dom";
 
-   // create the context - this is like a "channel" for sharing data//
+   // create the context for sharing favorites data//
  const FavoritesContext = createContext();
 
-  //  provider component - this wraps the app and provides the favorites data//
+  //  provider component that wraps the app/
   export const FavoritesProvider = ({ children }) => {
-    // use custom hook to store favorites in localStorage//
+    // use localStorage to save favorites between browswer sessions//
     const [favorites, setFavorites] = useLocalStorage("recipe-favorites",[]);
 
     // function to add a recipe to favorites//
       const addToFavorites = (recipe) => {
       // check if the recipe is already in favorites//
-      const isAlreadyFavorite = favorites.some(fav => fav.idMeal === recipe.idMeal);
+      const isAlready = favorites.find(fav => fav.idMeal === recipe.idMeal);
 
-        if (isAlreadyFavorite) {
+      // only add if it's not already there//
+
+        if (isAlready) {
           // add the recipe to the favorites array//
           setFavorites([...favorites,recipe]);
         }
@@ -28,7 +28,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 
     // function to remove a recipe form favorites//
     const removeFromFavorites = (recipeId) => {
-      // filter out the recipe with the matching Id//
+      // filter out the recipe with the matching Id that user wants to remove//
       setFavorites(favorites.filter(fav => fav.idMeal !== recipeId));
     };
 
@@ -45,17 +45,26 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
       isFavorite
     };
 
-    // provide the value to all child components//
+    // provide all the favorites functions to child components//
     return (
-      <FavoritesContext.Provider value={value}>
-        {children}
+      <FavoritesContext.Provider value={{
+        favorites,
+        addToFavorites,
+        removeFromFavorites,
+        isFavorite,
+      }}>
+        {children}        
       </FavoritesContext.Provider>
     );
-  } ;
+  }
 
-  // make sure the hook is used within a FavoritesProvider//
-  if(!context) {
+// hook to use favorites in any component//
+export function useFavorites() {
+  const context = useContext(FavoritesContext);
+
+  // make sure this hook is used inside the provider//
+   if(!context) {
     throw new Error("useFavorites must be used within a FavoritesProvider");
-  
+}
   return context;
-};
+}
