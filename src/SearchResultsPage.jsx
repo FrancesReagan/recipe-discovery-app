@@ -1,4 +1,4 @@
-// src/pages/SearchResultPage.jsx//
+// src/pages/SearchResultsPage.jsx//
 // page showing search results//
 
 import { useSearchParams } from "react-router-dom";
@@ -8,7 +8,7 @@ import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/ErrorMessage";
 
 
-function SearchResultPage() {
+function SearchResultsPage() {
 // get search query from URL parameters//
 const [searchParams] = useSearchParams();
 const query = searchParams.get("query");
@@ -49,4 +49,4 @@ const recipes = data?.meals || [];
    );
   }
 
-export default SearchResultPage;
+export default SearchResultsPage;

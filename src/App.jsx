@@ -1,5 +1,5 @@
-
-// main app with routing//
+// src/App.jsx//
+// main app component that sets up the routing//
 
 import { Route, Routes } from "react-router-dom";
 import { FavoritesProvider } from "./contexts/FavoritesContext";
@@ -8,35 +8,32 @@ import FavoritesPage from './pages/FavoritesPage';
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import RecipeDetailPage from "pages/RecipeDetailPage";
-import SearchPage from "./pages/SearchPage";
+import SearchResultsPage from "./pages/SearchResultsPage";
 import './App.css'
-
-// example of finding api key---not really for project//
-// console.log(import.meta.env.VITE_REST_COUNTRY_API_KEY)
 
 function App() {
   
   return (
+    // wrap entire app with favorites provider for global state//
     
-<FavoritesProvider>
-  <div className="min-h-screen bg-gray-50">
-    
-    <NavBar />
+   <FavoritesProvider>
+     <div className="min-h-screen bg-gray-50">
+      {/* navigation bar at the top */}
+      <NavBar />
 
-    <main className="container mx-auto px-4 py-8">   
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/category/:categoryName" element={<CategoryPage />} />
-         <Route path="/recipe/:recipeId" element={<RecipeDetailPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/search" element={<SearchPage />} />
-      </Routes>
-
-    </main>
-</FavoritesProvider>
-  </div>
-  
+      {/* main content area */}
+       <main>
+         {/* define all the routes */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+           <Route path="/category/:categoryName" element={<CategoryPage />} />
+          <Route path="/recipe/:recipeId" element={<RecipeDetailPage />} />
+         <Route path="/favorites" element={<FavoritesPage />} />
+         <Route path="/search" element={<SearchResultPage />} />
+       </Routes>
+      </main>
+     </div>
+   </FavoritesProvider>
   );
 }
 
