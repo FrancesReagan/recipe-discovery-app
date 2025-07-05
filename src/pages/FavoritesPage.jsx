@@ -20,9 +20,18 @@ function FavoritesPage() {
   }
 
   return (
-    
-
-
+    <div className="max-w-6xl mx-auto p-4">
+      {/* page title with count */}
+      <h1 className="text-3xl font-bold text-gray-900 mb-8">
+        Your Favorite Recipes({favorites.length})
+      </h1>
+      {/* grid of favorite recipe cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {favorites.map((recipe) => (
+          <RecipeCard key={recipe.idMeal}recipe={recipe}/>
+        ))}
+      </div>
+    </div>
   );
 }
 
