@@ -1,7 +1,7 @@
 // src/pages/HomePage.jsx
 // home page (/) will display all recipe categories//
 
-import {Link} from "react-rounter-dom";
+import {Link} from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import Spinner  from "../components/Spinner";
 import ErrorMessage from "../components/ErrorMessage";
@@ -50,7 +50,7 @@ function HomePage() {
       {/* category information */}
       <div className="p-4">
        <h2 className="text-xl font-semibold mb-2">{category.strCategory}</h2>
-       <p className="text-gray-600 text-sm">{category.strCategorDescription}</p>
+       <p className="text-gray-600 text-sm">{category.strCategoryDescription}</p>
      </div>
     </Link>
    ))}

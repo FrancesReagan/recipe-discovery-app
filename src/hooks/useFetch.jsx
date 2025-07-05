@@ -44,7 +44,7 @@ function useFetch(url) {
  
     fetchData();
     // run this effect when URL changes//
-    },[url]);
+    }, [url]);
  
     
   // return the data, loading state, and any errors//

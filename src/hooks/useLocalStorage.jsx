@@ -31,7 +31,7 @@ export const useLocalStorage = (key, initialValue) => {
   };
 
   // return the current value and the function to update it//
-  return[storedValue, setValue];
+  return [storedValue, setValue];
 }
 
 

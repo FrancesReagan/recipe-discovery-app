@@ -31,7 +31,7 @@ function RecipeDetailPage() {
 
   // extract ingredients from the API response//
   // the MealDB stores ingredients as strIngredient1, strIngredient2, etc.//
-  const ingredient = [];
+  const ingredients = [];
    for (let i = 1; i <= 20; i++) {
     const ingredient = recipe[`strIngredient${i}`];
     const measure = recipe[`strMeasure${i}`];

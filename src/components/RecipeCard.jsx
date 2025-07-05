@@ -1,6 +1,6 @@
 // recipe display card//
 import { Link } from "react-router-dom";
-import { useFavorites } from "../contexts/FavoritesContext";
+import { useFavorites } from "../context/FavoritesContext";
 
 function RecipeCard ({ recipe }) {
   // get favorites functions from context//

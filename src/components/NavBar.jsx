@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
   // state for the search input//
-  const [searchQuery, setSearchQuerty] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   // hook to navigate to different pages//
   const navigate =useNavigate();
 
@@ -16,11 +16,11 @@ function NavBar() {
     // prevent page refresh//
     e.preventDefault(); 
     // only search if user types something//
-    if (setSearchQuerty.trim()) {
+    if (searchQuery.trim()) {
       // go to searc page with the query//
       navigate(`/search?query=${searchQuery.trim()}`);
       // clear search box//
-      setSearchQuerty(""); 
+      setSearchQuery(""); 
     }
   };
 
@@ -39,7 +39,7 @@ function NavBar() {
               type="text"
               placeholder="Search for recipes..."
               value={searchQuery}
-              onChange={(e) => setSearchQuerty(e.target.value)}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-4 py-2 rounded-lg text-gray-900"
               />
           </form>

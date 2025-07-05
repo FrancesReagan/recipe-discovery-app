@@ -2,12 +2,12 @@
 // main app component that sets up the routing//
 
 import { Route, Routes } from "react-router-dom";
-import { FavoritesProvider } from "./contexts/FavoritesContext";
+import { FavoritesProvider } from "./context/FavoritesContext";
 import NavBar from "./components/NavBar";
 import FavoritesPage from './pages/FavoritesPage';
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
-import RecipeDetailPage from "pages/RecipeDetailPage";
+import RecipeDetailPage from "./pages/RecipeDetailPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 import './App.css'
 
@@ -29,7 +29,7 @@ function App() {
            <Route path="/category/:categoryName" element={<CategoryPage />} />
           <Route path="/recipe/:recipeId" element={<RecipeDetailPage />} />
          <Route path="/favorites" element={<FavoritesPage />} />
-         <Route path="/search" element={<SearchResultPage />} />
+         <Route path="/search" element={<SearchResultsPage />} />
        </Routes>
       </main>
      </div>
