@@ -23,15 +23,15 @@ function RecipeDetailPage() {
   if (error) return <ErrorMessage message={error} />;
 
   // get the recipe form the API response//
-  const recipe = data?.meals.[0];
-    if (!recipe) return <ErrorMessage message={"Recipe not found"} />;
+  const recipe = data?.meals[0];
+    if (!recipe) return <ErrorMessage message="Recipe not found" />;
 
   // check if recipe is favorited//
   const favorited = isFavorite(recipe.idMeal);
 
   // extract ingredients from the API response//
   // the MealDB stores ingredients as strIngredient1, strIngredient2, etc.//
-  const ingredients = [];
+  const ingredient = [];
    for (let i = 1; i <= 20; i++) {
     const ingredient = recipe[`strIngredient${i}`];
     const measure = recipe[`strMeasure${i}`];
@@ -57,7 +57,7 @@ function RecipeDetailPage() {
    return (
     <div className="max-w-4xl mx-auto p-4">
       {/* two column layout */}
-      < className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {/* left column - image and favorite button */}
       <div>
         <img 
@@ -67,8 +67,8 @@ function RecipeDetailPage() {
           />
           {/* favorites button */}
           <button 
-            onClick={handleFavoriteToggle}
-            className={`w-full py=3 px-6 rounded-lg font-semibold 
+            onClick={handleFavoriteClick}
+            className={`w-full py-3 px-6 rounded-lg font-semibold 
               ${favorited ? 
              "bg-red-600 hover:bg-red-700 text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-800"}`}
            >
@@ -78,7 +78,7 @@ function RecipeDetailPage() {
        </div>
 
        {/* right column - recipe details */}
-       <>
+       <div>
         
         {/* recipe title */}
         <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -89,7 +89,7 @@ function RecipeDetailPage() {
       <div className="mb-6">
         {recipe.strArea && (
           <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2">
-            📍{recipe.strArea}
+            📍 {recipe.strArea}
           </span>
         )}
         {recipe.strCategory && (
@@ -120,83 +120,6 @@ function RecipeDetailPage() {
     </div>
     </div>
    );
-  }0];
-
-   if(!recipe) return <ErrorMessage messsage="Recipe not found"/>;
-    const favorited = isFavorite(recipe.idMeal);
-
-    // get ingredients from the API response//
-    const ingredients = [];
-    for (let i = 1; i <= 20; i++) {
-      const ingredient = recipe[`strIngredient${i}`];
-      const measure = recipe[`strMeasure${i}`];
-
-      if(ingredient && ingredient.trim()){
-        ingredients.push({
-          ingredient: ingredient.trim(),
-          measure: measure ? measure.trim():""
-        });
-      }
-    }
-
-    const handleFavoriteToggle = () => {
-      if (favorited) {
-        removeFromFavorites(recipe.idMeal);
-      } else {
-        addToFavorites(recipe);
-      }
-    };
-    
-    return (
-      <div className="max-w-4xl mx-auto p-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <img
-             src={recipe.strMealThumb}
-             alt={recipe.strMeal}
-             className="w-full rounded-lg shadow-lg mb-4"
-             />
-
-             <button 
-               onClick={handleFavoriteToggle}
-               className={`w-full py-3 px-6 rounded-lg font-semibold ${
-                favorited ? "bg-red-600 hover:bg-red-700 text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-800"
-               }`}
-               >
-                {favorited ? "❤️ Remove from Favorites" : "🤍 Add to Favorites"}
-               </button>
-          </div>
-        </div>
-
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            {recipe.strMeal}
-          </h1>
-
-          <div className="mb-6">
-            {recipe.strArea && (
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2">
-                📍 {recipe.strArea}
-              </span>
-            )}
-            {recipe.strCategory && (
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                🏷️ {recipe.strCategory}
-              </span>
-            )}
-          </div>
-
-
-            
-
-        </div>
-      </div>
-    )
-
-
-
-
-
-}
-
+  }
+  export default RecipeDetailPage;
 
