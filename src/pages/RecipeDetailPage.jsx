@@ -48,9 +48,43 @@ function RecipeDetailPage() {
   //  handle favorite button click//
    const handleFavoriteClick = () => {
     if (favorited) {
-      
+      removeFromFavorites(recipe.idMeal);
+    } else {
+      addToFavorites(recipe);
     }
-   }
+   };
+
+   return (
+    <div className="max-w-4xl mx-auto p-4">
+      {/* two column layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* left column - image and favorite button */}
+      <div>
+        <img 
+          src={recipe.strMealThumb}
+          alt={recipe.strMeal}
+          className="w-full rounded-lg shadow-lg mb-4"
+          />
+          {/* favorites button */}
+          <button 
+            onClick={handleFavoriteToggle}
+            className={`w-full py=3 px-6 rounded-lg font-semibold 
+              ${favorited ? 
+             "bg-red-600 hover:bg-red-700 text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-800"}`}
+           >
+              {favorited ? "❤️ Remove from Favorites" : "🤍 Add to Favorites"}
+
+          </button>
+       </div>
+
+       {/* right column - recipe details */}
+       <div>
+        {/* recipe title */}
+        
+       </div>
+      </div>
+    </div>
+   )
 
 
 
