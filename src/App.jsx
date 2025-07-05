@@ -11,6 +11,9 @@ import RecipeDetailPage from "pages/RecipeDetailPage";
 import SearchPage from "./pages/SearchPage";
 import './App.css'
 
+// example of finding api key---not really for project//
+// console.log(import.meta.env.VITE_REST_COUNTRY_API_KEY)
+
 function App() {
   
   return (
