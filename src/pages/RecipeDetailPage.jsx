@@ -156,8 +156,19 @@ function RecipeDetailPage() {
              alt={recipe.strMeal}
              className="w-full rounded-lg shadow-lg mb-4"
              />
+
+             <button 
+               onClick={handleFavoriteToggle}
+               className={`w-full py-3 px-6 rounded-lg font-semibold ${
+                favorited ? "bg-red-600 hover:bg-red-700 text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-800"
+               }`}
+               >
+                {favorited ? "❤️ Remove from Favorites" : "🤍 Add to Favorites"}
+               </button>
           </div>
         </div>
+
+        
       </div>
     )
 
