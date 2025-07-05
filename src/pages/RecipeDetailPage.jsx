@@ -111,11 +111,35 @@ function RecipeDetailPage() {
           ))}
         </ul>
       </div>
-
+     {/* instructions */}
+     <div>
+      <h2 className="text-xl font-semibold mb-3">Instructions</h2>
+      <p className="text-gray-700 leading-relaxed">{recipe.strInstructions}</p>
        </div>
       </div>
     </div>
-   )
+    </div>
+   );
+  }0];
+
+   if(!recipe) return <ErrorMessage messsage="Recipe not found"/>;
+    const favorited = isFavorite(recipe.idMeal);
+
+    // get ingredients from the API response//
+    const ingredients = [];
+    for (let i = 1; i <= 20; i++) {
+      const ingredient = recipe[`strIngredient${i}`];
+      const measure = recipe[`strMeasure${i}`];
+
+      if(ingredient && ingredient.trim()){
+        ingredients.push({
+          ingredient: ingredient.trim(),
+          measure: measure ? measure.trim():""
+        });
+      }
+    }
+
+    
 
 
 
