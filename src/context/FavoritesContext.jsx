@@ -3,7 +3,7 @@
 
 import { createContext, useContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { UNSAFE_createBrowserHistory } from "react-router-dom";
+
 
    // create the context for sharing favorites data//
  const FavoritesContext = createContext();
@@ -20,9 +20,9 @@ import { UNSAFE_createBrowserHistory } from "react-router-dom";
 
       // only add if it's not already there//
 
-        if (isAlready) {
+        if (!isAlready) {
           // add the recipe to the favorites array//
-          setFavorites([...favorites,recipe]);
+          setFavorites([...favorites, recipe]);
         }
     };
 
@@ -37,14 +37,7 @@ import { UNSAFE_createBrowserHistory } from "react-router-dom";
       return favorites.some(fav => fav.idMeal === recipeId);
     };
 
-    // the value object that will be shared with all components//
-    const value = {
-      favorites,
-      addToFavorites,
-      removeFromFavorites,
-      isFavorite
-    };
-
+  
     // provide all the favorites functions to child components//
     return (
       <FavoritesContext.Provider value={{
