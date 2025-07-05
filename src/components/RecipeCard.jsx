@@ -1,50 +1,58 @@
 // recipe display card//
 import { Link } from "react-router-dom";
-import { useFavorites } from "../contexts/FavoriteContext";
+import { useFavorites } from "../contexts/FavoritesContext";
 
-const RecipeCard = ({ recipe }) => {
+function RecipeCard ({ recipe }) {
+  // get favorites functions from context//
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites(); 
-  const isRecipeFavorited = isFavorite(recipe.idMeal);
+  // see if recipe is currently a favorite//
+  const favorited = isFavorite(recipe.idMeal);
 
   const handleFavoriteClick = (e) => {
     // prevent navigation when clicking the heart//
     e.preventDefault();
+    // prevent event bubbling//
+    e.stopPropagation();
 
-    if(isRecipeFavorited) {
-      removeFromFavorites(recipe.idMeal);    }
-  } else {
-    addToFavorites(recipe.idMeal);
-  }
-};
+      if (favorited) {
+        removeFromFavorites(recipe.idMeal);
+      } else {
+        addToFavorites(recipe);
+      }
+    };
 
 return (
-  <div className="bg-white rounded shadow p-4">
-    {/* favorite button */}
-    <button
-    onClick={handleFavoriteClick}
-    className-"float-right p-1 bg-gray-100 rounded">
-    <span className={isRecipeFavorited ? "text-red-500"; "text-gray-400"}>
-    {isRecipeFavorited ? "❤️" : "🤍"}
-    </span>
-    </button>
 
- <Link t0={`/recipe/${recipe.idMeal}`}>
-  <img 
-    src={recipe.strMealThumb}
-    alt={recipe.strMeal}
-    className="w-full h-48 object-cover rounded mb-3" />
-    <h3 className="text-lg font-semibold text-gray-800">
-      {recipe.strMeal}
-    </h3>
+  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg">
+    {/* link to recipe detail page*/}
+     <Link to={`/recipe/${recipe.idMeal}`}>
 
-    {recipe.strArea && (
-      <p className="text-sm text-gray-500 mt-1">
-        📍{recipe.strArea}
-      </p>
+       <div className="relative">  
+          {/* recipe image */}
+         <img 
+          src={recipe.strMealThumb}
+          alt={recipe.strMeal}
+          className="w-full h-48 object-cover" 
+        />
+  
+      {/* favorite button over image */}
+      <button
+        onClick={handleFavoriteClick}
+        className="absolute top-2 right-2 bg-white rounded-full p-2 hover:bg-gray-100"
+      >
+       {favorited ? "❤️" : "🤍"}
+     </button>
+   </div>
+  {/* recipe information section goes here */}
+   <div className="p-4">
+     <h3 className="font-semibold text-lg mb-2">{recipe.strMeal}</h3>
+     {recipe.strArea && (
+      <p className="text-gray-600 text-sm">📍 {recipe.strArea}</p>
     )}
- </Link>
-  </div>
-);
+   </div>
+  </Link>
+ </div>
+ );
 };
 
 export default RecipeCard;
