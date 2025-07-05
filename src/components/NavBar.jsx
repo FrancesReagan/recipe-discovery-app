@@ -1,68 +1,63 @@
 // navigation with search//
 
 
-import { use, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function NavBar() {
+  // state for the search input//
   const [searchQuery, setSearchQuerty] = useState("");
+  // hook to navigate to different pages//
   const navigate =useNavigate();
 
   // handle search form submission//
   const handleSearch = (e) => {
     // prevent page refresh//
     e.preventDefault(); 
+    // only search if user types something//
     if (setSearchQuerty.trim()) {
-      // navigate to search page with query//
-      navigate(`/search?query=${encodeURIComponent(searchQuery.trim())}`);
+      // go to searc page with the query//
+      navigate(`/search?query=${searchQuery.trim()}`);
       // clear search box//
       setSearchQuerty(""); 
     }
   };
 
   return (
-    <nav className="bg-blue-600 text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-
-          {/* logo */}
-          <NavLink to="/" className="text-2xl font-bold">
+    <nav className="bg-blue-600 text-white p-4">
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
+        
+          {/* logo/home link */}
+          <Link to="/" className="text-xl font-bold">
           🍳 Discover Recipes
-          </NavLink>
+          </Link>
 
-          {/* search bar */}
+          {/* search form */}
           <form onSubmit={handleSearch} className="flex-1 max-w-md mx-8">
             <input 
               type="text"
               placeholder="Search for recipes..."
               value={searchQuery}
               onChange={(e) => setSearchQuerty(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg text-gray-900"/>
+              className="w-full px-4 py-2 rounded-lg text-gray-900"
+              />
           </form>
 
         {/* navigation links */}
-        <ul className="flex space-x-6">
-          <li>
-             <NavLink to="/">
-               Home
+        <div className="flex space-x-4">
+         
+             <Link to="/" className="hover:text-blue-200">
+              Home
+             </Link>
 
-             </NavLink>
-              </li>
-          <li>
-            <NavLink to="/farvorites">
+            <Link to="/favorites" className="hover:text-blue-200">
             ❤️ Favorites
-            </NavLink>
-          </li>
-        </ul>
+            </Link>
         </div>
-        </div>
-
+      </div>
     </nav>
   );
-
 }
-
- 
 
 export default NavBar;
