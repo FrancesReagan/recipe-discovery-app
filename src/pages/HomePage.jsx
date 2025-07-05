@@ -32,35 +32,31 @@ function HomePage() {
         Browse through different categories and find your next favorite meal.
     </p>
   </div>
-  
-{/* categories grid */}
-<div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4">
-{data?.categories?Map((category) => (
 
-<Link
-key={category.idCategory}
-to={`/category/${category.strCategory}`}
-className="block bg-white rounded shadow p-4">
-
-  <img
-  src={category.strCategoryThumb}
-  alt={category.strCategory}
-  className="w-full h-48 object-cover rounded mb-3" />
-  <h2 className="text-xl font-semibold mb-2">
-    {category.strCategory}
-  </h2>
-  <p className="text-gray-600 text-sm">
-    {category.strCategorDescription}
-  </p>
-</Link>
-
-))}
-
-</div>
-
-</div>
-
-  );
+{/* grid of category cards */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+ {data?.categories?.map((category) => (
+    <Link
+      key={category.idCategory}
+      to={`/category/${category.strCategory}`}
+      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg"
+    >
+      {/* category image */}
+      <img
+        src={category.strCategoryThumb}
+        alt={category.strCategory}
+        className="w-full h-48 object-cover" 
+      />
+      {/* category information */}
+      <div className="p-4">
+       <h2 className="text-xl font-semibold mb-2">{category.strCategory}</h2>
+       <p className="text-gray-600 text-sm">{category.strCategorDescription}</p>
+     </div>
+    </Link>
+   ))}
+  </div>
+ </div>
+ );
 };
 
 export default HomePage;
