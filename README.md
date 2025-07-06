@@ -112,14 +112,20 @@ _Installation_
 
  _API Endpoints Used_
  -This app uses the free TheMealDB API:
+ 
  -categories:https://www.themealdb.com/api/json/v1/1/categories.php
+ 
  -receipes by category:https://www.themealdb.com/api/json/v1/1/filter.php?c={category}
+ 
  -recipe details:https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}
+ 
  -search recipes:https://www.themealdb.com/api/json/v1/1/search.php?s={query}
 
  _How to Use_
  -Browse Recipes: start on the homepage to see all the recipe categories; click any category card to view recipes in that category; click any recipe card to see full details with ingredientsand instructions.
+ 
  -Searching for Recipes: use the search bar in the navigation bar; type a recipe name or ingredient; press enter to see search results.
+ 
  -Managing Favorites: click on the `🤍` heart icon on any recipe to add to the favorites; click on the ❤️ red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
     favorites are automatically saved and persist between browser sessions.
 
