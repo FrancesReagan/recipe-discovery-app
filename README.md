@@ -186,7 +186,8 @@ building custom hooks to handle state management in React and React's lifecycle 
 This customization enabled the class to tailor the hooks to the recipe discovery app needs.
 
   _What the `useFetch` hook does_
-  ---it automatically manages the entire lifecycle of an API call so components don't have to. 
+  ---it automatically manages the entire lifecycle of an API call so components don't have to. Automatica loading states---so eliminated "boilerplate" code in components; centralized error handling---as all API errors are handled consistently;
+  simple API--as components just destructure what they need; and null intial state--prevents false positives in conditional rendering.
   
   _The API call goes through 3 stages:_ "loading"--fetching data; "success"--yes received the data; "Error"---something went wrong.
  -in the code:
@@ -238,5 +239,29 @@ useFetch Hook Design:
 
     So the useFetch is wonderful across all components as they know what is happening, destructing is easy, and consistent across app:).
 
+____________________________________________________________________________________________________________________________________________
+
+`FavoritesContext` -- this Context API was used over "prop drilling" as multiple components needed access to favorites (the navbar, recipecard,favoritespage); the way the component tree was structures it would have required passing props through many levels;
+this Context API provides clean separation beteen the UI logic and the state management; and best of all--it will scale well --if anyone wants to expand this app in the future.
+
+_________________________________________________________________________________________________________________________________________________
+
+Technincal challenges: 
+
+-Routing and Navigation and Tailwinds CSS:
+ -setting up React Router with multiple dynamic routes was totally new to me---it taught me how to use `useParams()` to capture route parameters like recipe Ids and category names.; implement search functionality with `useSearchParams()` for query strings;
+  handle navigation well with useNavigate(). Getting the Tailwinds CSS just right was still a bit of a headache---I like Tailwinds CSS but I am still learning it--so the design I will improve on in the feature.
+
+-API integration: 
+
+ -working with the MealDB API taught me: how to handle different API endpoints for different data types; manage asynchronous data fetching with proper loading states; parsing complex API responses with nested ingredient/measuremnent data.
+
+
+-Component Architecture:
+
+ -This app is structured with clear separation of concerns: - pages: handle routing and handle data fetching (they choose what data to fetch and when); hooks: provide the reusable logic for HOW to fetch data consistently (useFetch) and state management   
+                                                              (useLocalStorage); components:reusable UI elements (navbar, recipecard, etc); context: global state sharing.
+
+                  
 
 
