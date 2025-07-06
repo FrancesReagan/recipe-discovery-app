@@ -21,14 +21,22 @@ ________________________________________________________________________________
 __🍲Features__
 
 _Browse Recipe Categories_
+
  -view all recipe categories from Beef, Chicken, Seafood, Dessert, etc. dishes.
+ 
  -category cards with images and descriptions of each dish.
+ 
  -click any category to explore receipes in that category.
+ 
  -click any recipe image and full recipe description is given.
+ 
 
  _Search Recipes_
+ 
   -real-time search functionality in the navigation bar.
+  
   -search by recipe name or ingredients.
+  
   -dedicated search results page.
   
 
