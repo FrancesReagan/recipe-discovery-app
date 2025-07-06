@@ -16,6 +16,14 @@ Built  with modern React patterns and TheMealDB API.
 
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/6b7daedb-f1b1-4868-92eb-9b27462388ce" />
 
+
+<img width="754" alt="image" src="https://github.com/user-attachments/assets/ce530a33-9e21-4b68-a935-9d7cdb9ce695" />
+
+
+<img width="754" alt="image" src="https://github.com/user-attachments/assets/68c56eeb-dd94-44e5-9c3f-e9fac58913ea" />
+
+
+
 ____________________________________________________________________________________________________________________________
 
 __🍲Features__
