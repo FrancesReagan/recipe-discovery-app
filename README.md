@@ -23,6 +23,7 @@ __If typo happens in search__
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/ce530a33-9e21-4b68-a935-9d7cdb9ce695" />
 
 
+
 __Search results for chocolate correctly typed__
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/68c56eeb-dd94-44e5-9c3f-e9fac58913ea" />
 
@@ -126,8 +127,21 @@ _Installation_
  
  -Searching for Recipes: use the search bar in the navigation bar; type a recipe name or ingredient; press enter to see search results.
  
- -Managing Favorites: click on the `🤍` heart icon on any recipe to add to the favorites; click on the ❤️ red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
+ -Managing Favorites: click on the `🤍` heart icon on any recipe to add to the favorites; click on the `❤️` red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
     favorites are automatically saved and persist between browser sessions.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+__Key React Concepts__
+-Custom Hooks: useFetch, useLocalStorage
+-Context API
+-React Router
+-State Management: FavoritesContext, Local State
+-Component Composition
+-Error Handling
+
+_Styling Approach_: Tailwind CSS; Component-based; Mobile-first
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
 
  
 
