@@ -26,27 +26,32 @@ function NavBar() {
 
   return (
     <nav className="bg-blue-600 text-white py-8">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between">
         
           {/* logo/home link */}
+          <div className="flex-shrink-0">
           <Link to="/" className="text-4xl font-bold hover:text-blue-200 transition-colors">
           🍳 Discover Recipes
           </Link>
+       </div>
 
-          {/* search form */}
-          <div className="flex-1 max-w-3xl mx-16">
-          <form onSubmit={handleSearch} className="flex-1 max-w-2xl mx-12">
+          {/* search form with white bg*/}
+          <div className="flex-1 max-w-2xl mx-12">
+          <form onSubmit={handleSearch} className="w-full">
             <input 
               type="text"
               placeholder="Search for recipes..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-8 py-6 text-2xl rounded-xl text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300 shadow-lg"
+              className="w-full px-8 py-6 text-2xl rounded-xl text-gray-900 bg-white border-0 focus:outline-none focus:ring-4 focus:ring-white 
+                         focus:ring-opacity-50 shadow-lg placeholder-gray-500"
               />
           </form>
-
+         </div>     
         {/* navigation links */}
-        <div className="flex space-x-10 min-w-fit">
+        <div className="flex-shrink-0">
+          <div className="flex space-x-8">
          
              <Link to="/" className="text-2xl font-bold hover:text-blue-200 transition-colors px-4 py-2">
               Home
@@ -57,6 +62,7 @@ function NavBar() {
             </Link>
         </div>
        </div>
+      </div>
       </div>
     </nav>
   );

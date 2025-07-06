@@ -8,7 +8,7 @@ import FavoritesPage from './pages/FavoritesPage';
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import RecipeDetailPage from "./pages/RecipeDetailPage";
-import SearchResultPage from "./pages/SearchResultPage.jsx";
+import SearchResultPage from "./pages/SearchResultPage";
 import './App.css'
 
 function App() {
