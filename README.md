@@ -96,10 +96,34 @@ _Installation_
  
  -`cd recipe-discovery-app`
  
- -Install dependencies and required packages: `npm install` , `npm install react-router-dom`, `npm install tailwindcss@tailwindcss/vite`
+ _-Install dependencies and required packages:_ `npm install` , `npm install react-router-dom`, `npm install tailwindcss@tailwindcss/vite`
  
- -Configure Tailwind CSS: Update your vite.config.js: `import { defineConfig } from 'vite'`,`import react from '@vitejs/plugin-react'`,
+ _Configure Tailwind CSS:_ Update your vite.config.js: `import { defineConfig } from 'vite'`,`import react from '@vitejs/plugin-react'`,
  `import tailwindcss from '@tailwindcss/vite'`,`export default defineConfig({ plugins: [react(), tailwindcss()]})`
+
+ _Start the development server_
+ -`npm run dev`
+ -open your browser: Navigate to http://localhost:5173 to view the application--or within VS Cod `ctrl click` hyperlink.
+
+ _Available Scripts_
+ -`npm run dev` 
+ -`npm run build`
+ -`npm run preview`
+
+ _API Endpoints Used_
+ -This app uses the free TheMealDB API:
+ -categories:https://www.themealdb.com/api/json/v1/1/categories.php
+ -receipes by category:https://www.themealdb.com/api/json/v1/1/filter.php?c={category}
+ -recipe details:https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}
+ -search recipes:https://www.themealdb.com/api/json/v1/1/search.php?s={query}
+
+ _How to Use_
+ -Browse Recipes: start on the homepage to see all the recipe categories; click any category card to view recipes in that category; click any recipe card to see full details with ingredientsand instructions.
+ -Searching for Recipes: use the search bar in the navigation bar; type a recipe name or ingredient; press enter to see search results.
+ -Managing Favorites: click on the `🤍` heart icon on any recipe to add to the favorites; click on the ❤️ red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
+    favorites are automatically saved and persist between browser sessions.
+
+ 
 
 
 
