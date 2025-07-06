@@ -86,6 +86,15 @@ _Browse Recipe Categories_
    
 <img width="152" alt="image" src="https://github.com/user-attachments/assets/19139db6-920c-4b51-bcb6-d6303cbdb8cd" />
 
+_Make it Run_
+ _Must have_
+ -Node.js (16 or higher)
+ -npm (comes with node.js)
+
+_Installation_
+ -Clone the repository `git clone 
+
+
 
 
 
