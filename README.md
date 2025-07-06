@@ -115,6 +115,7 @@ _Installation_
 
 
  _Available Scripts_
+ 
  -`npm run dev` 
  
  -`npm run build`
@@ -140,7 +141,7 @@ _Installation_
  
  -Searching for Recipes: use the search bar in the navigation bar; type a recipe name or ingredient; press enter to see search results.
  
- -Managing Favorites: click on the "`🤍`" heart icon on any recipe to add to the favorites; click on the "`❤️`" red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
+ -Managing Favorites: click on the "`🤍`" white heart icon on any recipe to add to the favorites; click on the "`❤️`" red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
     favorites are automatically saved and persist between browser sessions.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -182,27 +183,56 @@ JavaScript objects and JSON strings.
 
 Our class made the choice to structure the application around the custom hooks "useFetch" and "useLocalStorage" rather then using external libraries or more complex state mangement approaches.This approach helped me learn about 
 building custom hooks to handle state management in React and React's lifecycle methods. These hooks are simple, resuable, and customizable for later use--which is great.
+This customization enabled the class to tailor the hooks to the recipe discovery app needs.
 
-This customization enabled the class to tailor the hooks to the recipe discovery app needs:
-
-in the code:
-
+  _What the `useFetch` hook does_
+  ---it automatically manages the entire lifecycle of an API call so components don't have to. 
+  
+  _The API call goes through 3 stages:_ "loading"--fetching data; "success"--yes received the data; "Error"---something went wrong.
+ -in the code:
 useFetch Hook Design:
 
 `function useFetch(){
 
-   const[data,setData]=useState(null);
+   const[data,setData]=useState(null); //actual data from API//
    
-   const[loading, setLoading]=useState(true);
+   const[loading, setLoading]=useState(true); //are we still fetching?//
    
-   const[error, setError]=useState(null);
+   const[error, setError]=useState(null); //did something go wrong?//
    
    //...
    
   return {data,loading,error};
   
   } `
-   
+
+  Without this custom hook --every component would need to use a useEffect function---example:
+
+  `function RecipeCard(){
+     const [recipes,setRecipes] = useState(null);
+     const [loading, setLoading] = useState(true);
+     const [error, setError] = useState(null);
+
+     useEffect(() => {
+      const fetchData = async () => {
+       try {
+         setLoading(true);
+         setError(null);
+         const response = await fetch(url);
+         if(!response.ok) throw new Error("Failed");
+         const result = await response.json();
+         setRecipes(result);
+         } catch (error) {
+            setError(error.message);
+         } finally {
+            setLoading(false);
+         }
+        };
+         fetchData();
+        },[]);`
+
+
+    So the useFetch is wonderful across all components as they know what is happening, destructing is easy, and consistent across app:).
 
 
 
