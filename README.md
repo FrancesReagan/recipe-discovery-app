@@ -140,7 +140,7 @@ _Installation_
  
  -Searching for Recipes: use the search bar in the navigation bar; type a recipe name or ingredient; press enter to see search results.
  
- -Managing Favorites: click on the `🤍` heart icon on any recipe to add to the favorites; click on the `❤️` red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
+ -Managing Favorites: click on the "`🤍`" heart icon on any recipe to add to the favorites; click on the "`❤️`" red heart to remove from favorites; visit the "favorites" page to see all the saved recipes you love;
     favorites are automatically saved and persist between browser sessions.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
