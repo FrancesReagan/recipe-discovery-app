@@ -92,26 +92,38 @@ _Make it Run_
  -Node.js (16 or higher)
  -npm (comes with node.js)
 
+
 _Installation_
+
  -Clone the repository `git clone https://github.com/FrancesReagan/recipe-discovery-app/tree/main`
  
  -`cd recipe-discovery-app`
+
  
  _-Install dependencies and required packages:_ `npm install` , `npm install react-router-dom`, `npm install tailwindcss@tailwindcss/vite`
+
  
  _Configure Tailwind CSS:_ Update your vite.config.js: `import { defineConfig } from 'vite'`,`import react from '@vitejs/plugin-react'`,
  `import tailwindcss from '@tailwindcss/vite'`,`export default defineConfig({ plugins: [react(), tailwindcss()]})`
 
+
  _Start the development server_
+ 
  -`npm run dev`
+ 
  -open your browser: Navigate to http://localhost:5173 to view the application--or within VS Cod `ctrl click` hyperlink.
+
 
  _Available Scripts_
  -`npm run dev` 
+ 
  -`npm run build`
+ 
  -`npm run preview`
 
+
  _API Endpoints Used_
+ 
  -This app uses the free TheMealDB API:
  
  -categories:https://www.themealdb.com/api/json/v1/1/categories.php
@@ -123,6 +135,7 @@ _Installation_
  -search recipes:https://www.themealdb.com/api/json/v1/1/search.php?s={query}
 
  _How to Use_
+ 
  -Browse Recipes: start on the homepage to see all the recipe categories; click any category card to view recipes in that category; click any recipe card to see full details with ingredientsand instructions.
  
  -Searching for Recipes: use the search bar in the navigation bar; type a recipe name or ingredient; press enter to see search results.
@@ -133,10 +146,15 @@ _Installation_
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 __Key React Concepts__
 -Custom Hooks: useFetch, useLocalStorage
+
 -Context API
+
 -React Router
+
 -State Management: FavoritesContext, Local State
+
 -Component Composition
+
 -Error Handling
 
 _Styling Approach_: Tailwind CSS; Component-based; Mobile-first
@@ -166,13 +184,23 @@ Our class made the choice to structure the application around the custom hooks "
 building custom hooks to handle state management in React and React's lifecycle methods. These hooks are simple, resuable, and customizable for later use--which is great.
 
 This customization enabled the class to tailor the hooks to the recipe discovery app needs:
-useFetch Hood Design:
+
+in the code:
+
+useFetch Hook Design:
+
 `function useFetch(){
+
    const[data,setData]=useState(null);
+   
    const[loading, setLoading]=useState(true);
+   
    const[error, setError]=useState(null);
+   
    //...
+   
   return {data,loading,error};
+  
   } `
    
 
