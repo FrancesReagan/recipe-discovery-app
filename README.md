@@ -83,6 +83,8 @@ _Browse Recipe Categories_
    -Custom Hooks-
 
    _Project Structure_
+   
+<img width="152" alt="image" src="https://github.com/user-attachments/assets/19139db6-920c-4b51-bcb6-d6303cbdb8cd" />
 
 
 
