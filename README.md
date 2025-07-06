@@ -1,7 +1,7 @@
 __🍴🍳🥘Recipe Discovery App🍴🍳🥘__
 
 A simple React application that will help users discover new recipes from around the world and save their favorites to try making later. 
-Built with modern React patterns and TheMealDB API.
+Built  with modern React patterns and TheMealDB API.
 
 
 <img width="766" alt="image" src="https://github.com/user-attachments/assets/ad271980-331d-41e8-9c0e-2a294e582fa5" />
