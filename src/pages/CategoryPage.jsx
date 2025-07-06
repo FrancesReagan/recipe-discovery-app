@@ -23,17 +23,26 @@ function CategoryPage() {
 
 
   return (
-    <div className="max-w-6xl mx-auto p-4">
-      {/* pagee title showing the category */}
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">
-        {categoryName} Recipes
-      </h1>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-8">
+      {/* page title showing the category */}
+      {/* page title centered */}
+      <div className="text-center mb-16">
+        <h1 className="text-6xl font-bold text-gray-900 mb-8">
+          {categoryName} Recipes
+        </h1>
+          {/* bigger subtitle */}
+         <p className="text-2xl text-gray-600">
+            Discover delicious {categoryName.toLowerCase()} recipes
+         </p>
+       </div>
     {/* grid of recipe cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 justify-items-center">
       {data?.meals?.map((recipe) => (
         <RecipeCard key={recipe.idMeal} recipe={recipe}/>
       ))}
     </div>
+  </div>
   </div>
 );
 }
