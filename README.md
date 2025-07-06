@@ -259,8 +259,8 @@ Technincal challenges:
 
 -Component Architecture:
 
- -This app is structured with clear separation of concerns: - pages: handle routing and handle data fetching (they choose what data to fetch and when); hooks: provide the reusable logic for HOW to fetch data consistently (useFetch) and state management   
-                                                              (useLocalStorage); components:reusable UI elements (navbar, recipecard, etc); context: global state sharing.
+ -This app is structured with clear separation of concerns: -`Pages`: handle routing and handle data fetching (they choose what data to fetch and when); `Hooks`: provide the reusable logic for HOW to fetch data consistently (useFetch) and state management   
+                                                              (useLocalStorage); `Components`:reusable UI elements (navbar, recipecard, etc); `Context`: global state sharing.
 
                   
 
