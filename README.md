@@ -10,7 +10,7 @@ __Home Page__
 __Beef Category Search__
 <img width="749" alt="image" src="https://github.com/user-attachments/assets/cbd5fdd5-d178-4746-b292-ae88e63d995c" />
 
-
+__Beef Strognaff Recipe Card Detail__
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/e6a314ee-8c2e-4f47-bc35-9e33878a5703" />
 
 
