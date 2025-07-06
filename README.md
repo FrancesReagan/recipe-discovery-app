@@ -300,6 +300,9 @@ _Things to think about_
     
 -Browser APIs:[localStorageMDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
               [JSON.stringify/parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+
+-JavaScript: [Destructing Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+             [Async/Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
  
  
  
