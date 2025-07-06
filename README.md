@@ -193,20 +193,16 @@ This customization enabled the class to tailor the hooks to the recipe discovery
 useFetch Hook Design:
 
 `function useFetch(){
-
    const[data,setData]=useState(null); //actual data from API//
-   
    const[loading, setLoading]=useState(true); //are we still fetching?//
-   
    const[error, setError]=useState(null); //did something go wrong?//
-   
    //...
-   
   return {data,loading,error};
-  
   } `
 
   Without this custom hook --every component would need to use a useEffect function---example:
+
+  ---------------------------------------------------------------------------------------------------------------------------------------
 
   `function RecipeCard(){
      const [recipes,setRecipes] = useState(null);
@@ -231,6 +227,7 @@ useFetch Hook Design:
          fetchData();
         },[]);`
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
     So the useFetch is wonderful across all components as they know what is happening, destructing is easy, and consistent across app:).
 
