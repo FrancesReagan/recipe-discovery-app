@@ -3,8 +3,8 @@ __🍴🍳🥘Recipe Discovery App🍴🍳🥘__
 A simple React application that will help users discover new recipes from around the world and save their favorites to try making later. 
 Built  with modern React patterns and TheMealDB API.
 ---------------------------------------------------------------------------------------------------------------------------------
-__Home Page__
-🔭<img width="766" alt="image" src="https://github.com/user-attachments/assets/ad271980-331d-41e8-9c0e-2a294e582fa5" />🔭
+🔭__Home Page__🔭
+<img width="766" alt="image" src="https://github.com/user-attachments/assets/ad271980-331d-41e8-9c0e-2a294e582fa5" />
 ------------------------------------------------------------------------------------------------------------------------------
 
 🍖__Beef Category Search__🍖
@@ -19,21 +19,21 @@ __Home Page__
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/6b7daedb-f1b1-4868-92eb-9b27462388ce" />
 
 --------------------------------------------------------------------------------------------------------------------------
-__If typo happens in search__
+😵‍💫__If typo happens in search__😵‍💫
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/ce530a33-9e21-4b68-a935-9d7cdb9ce695" />
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-__Search results for chocolate correctly typed__
+🍫__Search results for chocolate correctly typed__🍫
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/68c56eeb-dd94-44e5-9c3f-e9fac58913ea" />
 
 
 
 ____________________________________________________________________________________________________________________________
 
-__🍲Features__
+__🍲Features__🍲
 
-_Browse Recipe Categories_
+🧐_Browse Recipe Categories_🧐
 
  -view all recipe categories from Beef, Chicken, Seafood, Dessert, etc. dishes.
  
@@ -44,7 +44,7 @@ _Browse Recipe Categories_
  -click any recipe image and full recipe description is given.
  
 
- _Search Recipes_
+ 🕵️‍♂️_Search Recipes_🕵️‍♂️
  
   -real-time search functionality in the navigation bar.
   
@@ -62,19 +62,19 @@ _Browse Recipe Categories_
   
   -easy removal of recipes from favorites.
 
- _Recipe Details_
+ 🔎_Recipe Details_🔎
   -complete recipe information with high-quality items.
   -detailed ingredients list with measurements.
   -step-by-step cooking instructions.
   -recipe category and cuisine country origin tags.
 
-  _Modern Design_
+  💫_Modern Design_💫
    -clean and responsive design built with Tailwind CSS.
    -mobile-friendly layout that works on all devices.
    -smooth hover effects and intutive navigation.
    -professional loading states and error handling.
 
-   _Tech Used_
+  🚀 _Tech Used_🚀
    -React 19
    -React Router DOM
    -Tailwind CSS
@@ -164,7 +164,7 @@ _Styling Approach_: Tailwind CSS; Component-based; Mobile-first
 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________
 
- __Acknowledgements__
+ 🙏__Acknowledgements__🙏
  -2025-RTT-23 PS instructors A.Tavarez and C.Wright and my fellow classmates
  -TheMealDB
  -TailwindCSS
@@ -172,7 +172,7 @@ ________________________________________________________________________________
  -React
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-__Reflection__
+🤔__Reflection__🤔
 
 Most challenging part of this project was implementing the favorites functionality with persistent storage using localStorage. I initally had challenges with state synchronization--that is ensuring that the favorites
 state stayed consistent across different pages and browser refreshes. Other challenges included: Context API- making sure the FavoritesContext was properly set up to share state across all components; Data Persistence--
