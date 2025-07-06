@@ -14,7 +14,7 @@ __Beef Strognaff Recipe Card Detail__
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/e6a314ee-8c2e-4f47-bc35-9e33878a5703" />
 
 
-__Favorites saved in their own page__
+__Favorites saved__
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/6b7daedb-f1b1-4868-92eb-9b27462388ce" />
 
 
