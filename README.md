@@ -151,8 +151,19 @@ ________________________________________________________________________________
  -React
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+__Reflection__
 
+Most challenging part of this project was implementing the favorites functionality with persistent storage using localStorage. I initally had challenges with state synchronization--that is ensuring that the favorites
+state stayed consistent across different pages and browser refreshes. Other challenges included: Context API- making sure the FavoritesContext was properly set up to share state across all components; Data Persistence--
+getting the useLocalStorage hook to work correctly with React's state management.
 
+The main difficulty was learning to understand how to combine React's state management with browswer storage. I learned that localStorage only stores strings, so I needed to use JSON.stringify() and JSON.parse() to convert
+my recipe objects. I also had to handle cases where localStorage might not be available or might fail. The solution was to create the custom hook "useLocalStorage" that abstracts away all the complexity of localStorage management
+and integrates easily with React's state system. This hook handles: reading from localStorage on the intial load; automatically saves to localStorage when the state changes; error handling for storage failures; converting between
+JavaScript objects and JSON strings.
+
+Our class made the choice to structure the application around the custom hooks "useFetch" and "useLocalStorage" rather then using external libraries or more complex state mangement approaches.This approach helped me learn about 
+building custom hooks to handle state management in React and React's lifecycle methods. These hooks are simple, resuable, and customizable for later use--which is great.
 
 
 
