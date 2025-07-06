@@ -25,56 +25,62 @@ return (
  <div className="min-h-screen bg-gray-50">
   {/* page header */}
   <div className="bg-white shadow-sm">
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-  <div className="text-center">
+  <div className="w-full py-24">
+  <div className="text-center px-8">
     {/* title */}
-     <h1 className="text-6xl font-bold text-gray-900 mb-8">
+     <h1 className="text-8xl font-black text-gray-900 mb-10 text-center">
             Discover Amazing Recipes
      </h1>
      {/* subtitle */}
-   <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+   <p className="text-4xl text-gray-600 text-center leading-relaxed max-w-6xl mx-auto">
         Browse through different categories and find your next favorite meal.
     </p>
   </div>
-</div>
+ </div>
 </div>
 
+{/* cards section -- centered */}
+<div className="w-full py-20">
+  <div className="max-w-7xl mx-auto px-8">
+
 {/* grid of category cards */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 justify-items-center">
  {data?.categories?.map((category) => (
     <Link
       key={category.idCategory}
       to={`/category/${category.strCategory}`}
-      className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+      className="group w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3"
     >
       {/* category image */}
-      <div className="aspect-w-16 aspect-h-12 overflow-hidden">
+      <div className="relative overflow-hidden">
       <img
         src={category.strCategoryThumb}
         alt={category.strCategory}
-        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-      />
+        className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+       />
       </div> 
       {/* category information */}
-      <div className="p-6">
-       <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+      <div className="p-8">
+       <h2 className="text-3xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors text-center">
         {category.strCategory}
       </h2>
-       <p className="text-gray-600 text-base leading-relaxed line-clamp-4">
+       <p className="text-xl text-gray-600 leading-relaxed line-clamp-4 mb-8 text-center">
         {category.strCategoryDescription}
         </p>
         {/* explore arrow */}
-        <div className="mt-4 flex items-center text-blue-600 group-hover:text-blue-700">
-          <span className="text-sm font-semibold">Explore recipes</span>
-          <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+        <div className="flex items-center justify-center text-blue-600 group-hover:text-blue-700">
+          <span className="text-xl font-bold">Explore recipes</span>
+          <svg className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
-             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
           </svg>
         </div>
       </div>
     </Link>
    ))}
   </div>
+ </div>
+ </div>
  </div>
  );
 }
