@@ -94,7 +94,7 @@ _Make it Run_
 _Installation_
  -Clone the repository `git clone https://github.com/FrancesReagan/recipe-discovery-app/tree/main`
  -`cd recipe-discovery-app`
- -Install dependencies and required packages: `npm install` , `npm install react-router-dom`, npm install tailwindcss@tailwindcss/vite`
+ -Install dependencies and required packages: `npm install` , `npm install react-router-dom`, `npm install tailwindcss@tailwindcss/vite`
  -Configure Tailwind CSS: Update your vite.config.js:
                                               `import { defineConfig } from 'vite'`
 `import react from '@vitejs/plugin-react'`
