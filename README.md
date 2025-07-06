@@ -53,14 +53,36 @@ _Browse Recipe Categories_
 
  _Favorites Management_
  
-  -Save your favorite recipes with one click.
+  -save your favorite recipes with one click.
   
   -persistent storage using browser localStorage.
   
-  -View all saved recipes on the favorites page.
+  -view all saved recipes on the favorites page.
   
-  -Easy removal of recipes from favorites.
-  
+  -easy removal of recipes from favorites.
+
+ _Recipe Details_
+  -complete recipe information with high-quality items.
+  -detailed ingredients list with measurements.
+  -step-by-step cooking instructions.
+  -recipe category and cuisine country origin tags.
+
+  _Modern Design_
+   -clean and responsive design built with Tailwind CSS.
+   -mobile-friendly layout that works on all devices.
+   -smooth hover effects and intutive navigation.
+   -professional loading states and error handling.
+
+   _Tech Used_
+   -React 19
+   -React Router DOM
+   -Tailwind CSS
+   -Vite 6.35
+   -TheMealDB API
+   -Context API
+   -Custom Hooks-
+
+   _Project Structure_
 
 
 
