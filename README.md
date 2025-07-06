@@ -50,6 +50,16 @@ _Browse Recipe Categories_
   -search by recipe name or ingredients.
   
   -dedicated search results page.
+
+ _Favorites Management_
+ 
+  -Save your favorite recipes with one click.
+  
+  -persistent storage using browser localStorage.
+  
+  -View all saved recipes on the favorites page.
+  
+  -Easy removal of recipes from favorites.
   
 
 
