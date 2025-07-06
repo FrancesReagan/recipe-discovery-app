@@ -165,5 +165,16 @@ JavaScript objects and JSON strings.
 Our class made the choice to structure the application around the custom hooks "useFetch" and "useLocalStorage" rather then using external libraries or more complex state mangement approaches.This approach helped me learn about 
 building custom hooks to handle state management in React and React's lifecycle methods. These hooks are simple, resuable, and customizable for later use--which is great.
 
+This customization enabled the class to tailor the hooks to the recipe discovery app needs:
+useFetch Hood Design:
+`function useFetch(){
+   const[data,setData]=useState(null);
+   const[loading, setLoading]=useState(true);
+   const[error, setError]=useState(null);
+   //...
+  return {data,loading,error};
+  } `
+   
+
 
 
