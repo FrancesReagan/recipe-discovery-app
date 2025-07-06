@@ -8,7 +8,7 @@ import FavoritesPage from './pages/FavoritesPage';
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import RecipeDetailPage from "./pages/RecipeDetailPage";
-import SearchResultsPage from "./pages/SearchResultsPage";
+import SearchResultPage from "./pages/SearchResultPage.jsx";
 import './App.css'
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
            <Route path="/category/:categoryName" element={<CategoryPage />} />
           <Route path="/recipe/:recipeId" element={<RecipeDetailPage />} />
          <Route path="/favorites" element={<FavoritesPage />} />
-         <Route path="/search" element={<SearchResultsPage />} />
+         <Route path="/search" element={<SearchResultPage />} />
        </Routes>
       </main>
      </div>
