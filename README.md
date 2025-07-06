@@ -17,10 +17,10 @@ __Beef Strognaff Recipe Card Detail__
 __Favorites saved__
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/6b7daedb-f1b1-4868-92eb-9b27462388ce" />
 
-
+__If typo happens in search__
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/ce530a33-9e21-4b68-a935-9d7cdb9ce695" />
 
-
+__Search results for chocolate correctly typed__
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/68c56eeb-dd94-44e5-9c3f-e9fac58913ea" />
 
 
