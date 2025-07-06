@@ -5,7 +5,8 @@ Recipe Discovery App
 <img width="749" alt="image" src="https://github.com/user-attachments/assets/cbd5fdd5-d178-4746-b292-ae88e63d995c" />
 
 
-<img width="751" alt="image" src="https://github.com/user-attachments/assets/342af324-4545-4a14-a253-a403290020bf" />
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/e6a314ee-8c2e-4f47-bc35-9e33878a5703" />
+
 
 
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/6b7daedb-f1b1-4868-92eb-9b27462388ce" />
