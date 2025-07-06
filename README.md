@@ -281,3 +281,21 @@ _Areas for Expansion_
 _Things to think about_
  -The `Recipe Discovery App` taught me that modern web development requires seasoned coding skills, ability to take requirements and translate it into good code, patience, and persistence. For the latter, debugging the Tailwind CSS configuration issues really increased my patience levels:). Again, the importance of planning ahead and creating a sound architecture that supports all the functionality and beauty that the requirements for the App laid out to achieve---this was really driven home with this project.
 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ List of References for `Recipe Discovery App`:
+ -API:	[TheMealDB API Documentation](https://www.themealdb.com/api.php)
+ -React Core Concepts: [Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
+                       [useContext Hook](https://react.dev/reference/react/useContext)
+                       [React Context Guide](https://react.dev/learn/passing-data-deeply-with-context)
+-React Router: [React Router Documentation](https://reactrouter.com/en/main)
+               [useParams Hook](https://reactrouter.com/en/main/hooks/use-params)
+               [useNavigate Hook](https://reactrouter.com/en/main/hooks/use-navigate)
+               [useSearchParams Hook](https://reactrouter.com/en/main/hooks/use-search-params)
+-Styling:[Tailwind CSS Documentation](https://tailwindcss.com/docs)
+         [Tailwind Grid Layout](https://tailwindcss.com/docs/grid-template-columns)
+-Browser APIs:[localStorageMDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+              [JSON.stringify/parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+ 
+ 
+ 
+
