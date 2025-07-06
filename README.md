@@ -4,18 +4,18 @@ A simple React application that will help users discover new recipes from around
 Built  with modern React patterns and TheMealDB API.
 ---------------------------------------------------------------------------------------------------------------------------------
 __Home Page__
-<img width="766" alt="image" src="https://github.com/user-attachments/assets/ad271980-331d-41e8-9c0e-2a294e582fa5" />
+🔭<img width="766" alt="image" src="https://github.com/user-attachments/assets/ad271980-331d-41e8-9c0e-2a294e582fa5" />🔭
 ------------------------------------------------------------------------------------------------------------------------------
 
-__Beef Category Search__
+🍖__Beef Category Search__🍖
 <img width="749" alt="image" src="https://github.com/user-attachments/assets/cbd5fdd5-d178-4746-b292-ae88e63d995c" />
 ----------------------------------------------------------------------------------------------------------------------------
 
-__Beef Strognaff Recipe Card Detail__
+🍲__Beef Strognaff Recipe Card Detail__🍲
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/e6a314ee-8c2e-4f47-bc35-9e33878a5703" />
 --------------------------------------------------------------------------------------------------------------------------
 
-__Favorites saved__
+💖__Favorites saved__💖
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/6b7daedb-f1b1-4868-92eb-9b27462388ce" />
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -280,7 +280,4 @@ _Areas for Expansion_
 
 _Things to think about_
  -The `Recipe Discovery App` taught me that modern web development requires seasoned coding skills, ability to take requirements and translate it into good code, patience, and persistence. For the latter, debugging the Tailwind CSS configuration issues really increased my patience levels:). Again, the importance of planning ahead and creating a sound architecture that supports all the functionality and beauty that the requirements for the App laid out to achieve---this was really driven home with this project.
-
-                  
-
 
